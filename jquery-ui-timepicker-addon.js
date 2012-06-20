@@ -162,7 +162,7 @@ $.extend(Timepicker.prototype, {
 					o.onChangeMonthYear.call($input[0], year, month, dp_inst, tp_inst);
 			},
 			onClose: function(dateText, dp_inst) {
-				if (tp_inst.timeDefined === true && $input.val() != '')
+				if ($input.val() != '')
 					tp_inst._updateDateTime(dp_inst);
 				if ($.isFunction(o.onClose))
 					o.onClose.call($input[0], dateText, dp_inst, tp_inst);
